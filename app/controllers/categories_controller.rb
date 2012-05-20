@@ -3,10 +3,20 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find params[:id]
+    @look = @category.looks[0]
+    @looks ||= []
+
     render "look/show"
   end
 
   def search
-    # TODO search
+    @category = Category.find params[:category_id]
+    @search_look_name = params[:category][:name]
+
+    @look = @category.looks[0]
+    @looks = @category.looks.select {|l| l.name =~ /#{@search_look_name}/}
+
+    render "look/show"
   end
 end

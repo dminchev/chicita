@@ -1,0 +1,5 @@
+SEARCH 
+= form_for @category, :method => :get, :url => "/categories/#{@category.id}/search" do |f|
+	= f.hidden_field "id"
+	= f.text_field "name"
+	= f.submit "Search"
