@@ -14,6 +14,17 @@
 		look = Look.new
 		look.name = "Look name #{k}"
 		look.photo = File.new("#{Rails.root}/public/test/chira60.gif")
+
+    5.times do |p|
+      product_photo = File.new("#{Rails.root}/public/test/chira60.gif")
+      look.products.build(
+        :name => "Fashion product #{p}",
+        :desc => "This is the killer mega product of #{p}",
+        :price => rand * 100,
+        :photo => product_photo
+      )
+    end
+
 		look.save!
 		cat.looks << look
 	end
