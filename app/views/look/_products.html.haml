@@ -1,0 +1,14 @@
+%ul.products
+	- look.products.each do |product|
+		%li
+			%aside
+				= image_tag product.photo
+			%div
+				%header
+					%h3
+						= product.name
+						|
+						= product.price
+					%h3.action Buy
+				%section
+					= product.desc

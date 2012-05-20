@@ -195,14 +195,14 @@ article.look {
 	background: #000;
 	color: @clr-light;
 	padding: 10px;
-	width: 380px;
+	width: 520px;
 
 	header {
 		position: relative;
 
 		img {
-			width: 380px;
-			height: 380px;
+			width: 100%;
+			height: 100%;
 		}
 		
 		.chic-it {
@@ -217,59 +217,70 @@ article.look {
 			padding: 25px 10px;
 		}
 	}
+}
 
-	section {
-		h2 {
-			text-align: center;
-			text-transform: uppercase;
-			font-size: @fsz-big;
-			font-weight: 400;
-			margin: 20px 0;
-		}
+section.get-look {
+	background: #000;
+	color: @clr-light;
+	padding: 10px;
 
-		ul.products {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: @fsz-big;
+		font-weight: 400;
+		margin-bottom: 20px;
+	}
 
-			li {
-				margin-bottom: 10px;
-				overflow: hidden;
+	ul.products {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 
-				aside {
-					float: left;
-					margin-right: 10px;
-					width: 80px;
+		li {
+			margin-bottom: 10px;
+			overflow: hidden;
+
+			aside {
+				float: left;
+				margin-right: 10px;
+				width: 80px;
+				height: 80px;
+
+				img {
+					width: 100%;
+					height: 100%;
 				}
+			}
 
-				div {
-					float: left;
-					width: 290px;
-		
-					header {
-						h3 {
-							float: left;
-							margin: 0;
-							padding: 0;
-							text-transform: uppercase;
-							font-weight: 400;
-							font-size: @fsz-normal;
+			div {
+				float: left;
+				width: 270px;
+	
+				header {
+					overflow: hidden;
+					h3 {
+						float: left;
+						margin: 0;
+						padding: 0;
+						text-transform: uppercase;
+						font-weight: 400;
+						font-size: @fsz-normal;
 
-							&.action {
-								float: right;
-							}
+						&.action {
+							float: right;
 						}
 					}
-					section {
-						font-size: @fsz-small;	
-						
-					}
+				}
+				section {
+					font-size: @fsz-small;	
+					
 				}
 			}
 		}
-
 	}
 }
+
 
 footer#page-footer {
 	margin-top: 10px;
