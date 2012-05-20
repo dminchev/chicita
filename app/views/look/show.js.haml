@@ -1,0 +1,4 @@
+:plain
+	$('article.look').replaceWith("#{escape_javascript(render :partial => 'look/article', :locals => {:look => @look})}");
+	$('ul.products').replaceWith("#{escape_javascript(render :partial => 'look/products', :locals => {:look => @look})}");
+	$('section.story p').replaceWith("#{escape_javascript(render :partial => 'look/story', :locals => {:look => @look})}");
