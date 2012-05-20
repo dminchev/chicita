@@ -1,15 +1,16 @@
 .row
-	.span7
-		= render :partial => 'look/article', :locals => {:look => @look}
-		%section.looks
-			- Look.all.take(4).each do |look|
-				= link_to (image_tag look.photo.thumb), look_path(look), :remote => true
-	.span5
-		%section.story
-			%h2 Story
-			= render :partial => 'look/story', :locals => {:look => @look}
-		%section.get-look
-			%h2 Get that look
-			= render :partial => 'look/products', :locals => {:look => @look}
+  .span7
+    = render :partial => 'look/article', :locals => {:look => @look}
+    %section.looks
+      - Look.all.take(4).each do |look|
+        = link_to (image_tag look.photo.thumb), look_path(look), :remote => true
+  .span5
+    %section.story
+      %h2 Story
+      = render :partial => 'look/story', :locals => {:look => @look}
+    %section.get-look
+      %h2 Get that look
+      = render :partial => 'look/products', :locals => {:look => @look}
+
 	= render "shared/search"
 	= render "shared/thumbs"
