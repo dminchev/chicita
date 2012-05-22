@@ -4,7 +4,7 @@ set :scm, "git"
 set :user, "deploy"
 set :deploy_via, :remote_cache
 set :use_sudo, false
-set :rvm_bin_path, "/usr/local/rvm/bin"
+# set :rvm_bin_path, "/usr/local/rvm/bin"
 set :normalize_asset_timestamps, false
 
 ssh_options[:forward_agent] = true
