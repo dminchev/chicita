@@ -17,7 +17,7 @@
 .navbar-fixed-top {
 	
 	.navbar-inner {
-		background: #fff;
+		background: url('bg.png') transparent;
 		.box-shadow(none);
 
 		header {
@@ -125,6 +125,11 @@
 				&.right {
 					text-align: right;
 				}
+
+				a {
+					color: @clr-light;
+					text-decoration: none;
+				}
 			}
 		}
 
@@ -196,6 +201,7 @@ article.look {
 	color: @clr-light;
 	padding: 10px;
 	width: 520px;
+	margin-bottom: 20px;
 
 	header {
 		position: relative;
@@ -219,23 +225,107 @@ article.look {
 	}
 }
 
-section.get-look {
+section.looks {
+	margin-bottom: 20px;
+
+	a {
+		display: inline-block;
+		width: 90px;
+		height: 90px;
+		margin-bottom: 5px;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+section.search {
 	background: #000;
-	color: @clr-light;
 	padding: 10px;
+	color: @clr-light;
+	text-transform: uppercase;
+	overflow: hidden;
+
+
+	h3 {
+		float: left;
+		line-height: 14px;
+		margin-right: 10px;
+	}
+	form {
+		float: left;
+		margin: 0;
+
+		input.term {
+			.border-radius(0);
+			height: 12px;
+		}
+
+		input.btn {
+			.border-radius(0);
+			background: #fff;
+			padding: 1px 4px;
+			margin-top: -8px;
+		}
+	}
+}
+
+section.story {
+	background-color: #fff;
+	padding: 10px;
+	margin-top: -20px;
+	position: relative;
+	margin-bottom: 40px;
 
 	h2 {
-		text-align: center;
+		position: absolute;
+		top: 20px;
+		left: -20px;
+		background: #000;
+		color: @clr-light;
+		width: 350px;
+		padding-left: 50px;
+		
+		padding-bottom: 8px;
 		text-transform: uppercase;
-		font-size: @fsz-big;
-		font-weight: 400;
-		margin-bottom: 20px;
+		
+	}
+
+	p {
+		background-color: #e6e6e6;
+		padding: 10px;
+		padding-top: 80px;
+		margin: 0;
+	}
+}
+
+section.get-look {
+	background-color: #fff;
+	padding: 10px;
+	margin-top: -20px;
+	position: relative;
+	margin-bottom: 20px;
+
+	h2 {
+		position: absolute;
+		top: 20px;
+		left: -20px;
+		background: #000;
+		color: @clr-light;
+		width: 350px;
+		padding-left: 50px;
+		
+		padding-bottom: 8px;
+		text-transform: uppercase;
 	}
 
 	ul.products {
 		list-style-type: none;
+		background-color: #e6e6e6;
+		padding: 10px;
+		padding-top: 80px;
 		margin: 0;
-		padding: 0;
 
 		li {
 			margin-bottom: 10px;
@@ -255,7 +345,7 @@ section.get-look {
 
 			div {
 				float: left;
-				width: 270px;
+				width: 250px;
 	
 				header {
 					overflow: hidden;
@@ -269,6 +359,7 @@ section.get-look {
 
 						&.action {
 							float: right;
+							font-weight: bold;
 						}
 					}
 				}
@@ -294,3 +385,18 @@ footer#page-footer {
 	}
 	
 }
+
+
+.scroll-pane { overflow: hidden; width: 600px; float:left; }
+.scroll-content { width: 2440px; float: left; }
+.scroll-content-item { width: 80px; height: 80px; float: left; margin: 10px; font-size: 3em; line-height: 96px; text-align: center; }
+
+
+* html .scroll-content-item { display: inline; } /* IE6 float double margin bug */
+
+
+.scroll-bar-wrap { clear: left; padding: 0 4px 0 2px; margin: 0 -1px -1px -1px; }
+.scroll-bar-wrap .ui-slider { background: none; border:0; height: 2em; margin: 0 auto;  }
+.scroll-bar-wrap .ui-handle-helper-parent { position: relative; width: 100%; height: 100%; margin: 0 auto; }
+.scroll-bar-wrap .ui-slider-handle { top:.2em; height: 1.5em; }
+.scroll-bar-wrap .ui-slider-handle .ui-icon { margin: -8px auto 0; position: relative; top: 50%; }

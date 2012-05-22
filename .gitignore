@@ -16,3 +16,10 @@
 /public/uploads/*
 *.sw*
 /public/uploads/*
+
+
+.DS_Store
+.bundle
+log/*.log
+tmp/
+.rvmrc

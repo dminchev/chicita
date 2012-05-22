@@ -1,5 +1,5 @@
-SEARCH 
-= form_for @category, :method => :get, :url => "/categories/#{@category.id}/search" do |f|
+%h3 Search
+= form_for @category, :method => :get, :url => "/categories/#{@category.id}/search", :remote => true do |f|
 	= f.hidden_field "id"
-	= f.text_field "name"
-	= f.submit "Search"
+	= f.text_field "name", :class => 'term'
+	= f.submit "GO", :class => 'btn'

@@ -15,8 +15,8 @@ class CategoriesController < ApplicationController
     @search_look_name = params[:category][:name]
 
     @look = @category.looks[0]
-    @looks = @category.looks.select {|l| l.name =~ /#{@search_look_name}/}
+    @looks = @category.looks.select {|l| l.name =~ /#{@search_look_name}/i}
 
-    render "look/show"
+    # render "look/show"
   end
 end

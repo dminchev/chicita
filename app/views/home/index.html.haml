@@ -1,34 +1,42 @@
 .row
 	.span12.featured
 		.item.square.big
-			= image_tag "http://lorempixel.com/output/fashion-q-c-380-368-8.jpg"
+			= link_to (image_tag "cover/1.jpg"), 'categories/1'
 			.title
-				%h3.left Picture of the day
+				%h3.left 
+					= link_to "Picture of the day", 'categories/1'
 		.item.square.small
-			= image_tag "http://lorempixel.com/output/fashion-q-c-181-181-3.jpg"
+			= link_to (image_tag "cover/2.jpg"), 'categories/1'
 			.title 
-				%h3.right  60s
+				%h3.right
+					= link_to "60s", 'categories/1'
 		.item.square.small
-			= image_tag "http://lorempixel.com/output/fashion-q-c-181-181-10.jpg"
+			= link_to (image_tag "cover/3.jpg"), 'categories/2'
 			.title 
-				%h3.right  70s
+				%h3.right
+					= link_to "70s", 'categories/2'
 		.item.square.small.right
-			= image_tag "http://lorempixel.com/output/fashion-q-c-181-181-3.jpg"
+			= link_to (image_tag "cover/4.jpg"), 'categories/3'
 			.title 
-				%h3.right  80s
+				%h3.right
+					= link_to "80s", 'categories/3'
 		.item.square.small
-			= image_tag "http://lorempixel.com/output/fashion-q-c-181-181-9.jpg"
+			= link_to (image_tag "cover/5.jpg"), 'categories/4'
 			.title.top 
-				%h3.right  90s
+				%h3.right
+					= link_to "90s", 'categories/4'
 		.item.rectangle.small.right
-			= image_tag "http://lorempixel.com/output/fashion-q-c-368-181-6.jpg"
+			= link_to (image_tag "cover/6.jpg"), 'categories/5'
 			.title.top 
-				%h3.right Today
+				%h3.right
+					= link_to "Today", 'categories/5'
 		.item.rectangle.big
-			= image_tag "http://lorempixel.com/output/fashion-q-c-467-181-4.jpg"
+			= link_to (image_tag "cover/7.jpg"), 'categories/2'
 			.title 
-				%h3.left Product of the day
+				%h3.left 
+					= link_to "Product of the day", 'categories/5'
 		.item.rectangle.big.right
-			= image_tag "http://lorempixel.com/output/fashion-q-c-467-181-7.jpg"
+			= link_to (image_tag "cover/8.jpg"), 'categories/2'
 			.title 
-				%h3.right Article of the day
+				%h3.right
+					= link_to "Article of the day", 'categories/5'

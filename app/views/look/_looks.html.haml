@@ -1,0 +1,3 @@
+%section.looks
+	- looks.each do |look|
+		= link_to (image_tag look.photo.thumb), look_path(look), :remote => true
