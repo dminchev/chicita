@@ -19,6 +19,10 @@ set :deploy_to, "/data/apps/chicita.eu"
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
+  desc "reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+  end
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path, 'tmp', 'restart.txt')}"
   end
